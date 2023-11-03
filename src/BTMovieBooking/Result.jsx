@@ -40,8 +40,8 @@ export const Result = () => {
                             <tr>
                                 <td>{ghe.soGhe}</td>
                                 <td>{ghe.gia}</td>
-                                <td className="text-danger" onClick={()=>{
-                                    dispatch(btMovieBookingActions.setHuyGhe(ghe.soGhe))
+                                <td style={{cursor:'pointer'}} className="text-danger" onClick={()=>{
+                                    dispatch(btMovieBookingActions.setHuyGhe(ghe))
                                 }}>X</td>
                             </tr>
                         )

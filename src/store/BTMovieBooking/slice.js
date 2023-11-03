@@ -36,7 +36,6 @@ export const btMovieBookingSlice = createSlice({
             state.chairsBooking = []
         },
         setHuyGhe: (state, { payload }) => {
-            let danhSachGheDangDat = [...state.chairsBooking]
             const index = state.chairsBooking.findIndex((value) => value.soGhe === payload.soGhe)
             if (index !== -1) {
                 // state.chairsBooking = state.chairsBooking.filter(
@@ -44,7 +43,7 @@ export const btMovieBookingSlice = createSlice({
                 // )
                 state.chairsBooking.splice(index, 1)
             } else {
-                state.chairsBooking = danhSachGheDangDat
+                state.chairsBooking.push(payload)
             }
         },
     },
